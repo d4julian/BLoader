@@ -1,7 +1,7 @@
-package io.github.hhservers.bstarter.config;
+package io.github.hhservers.bloader.config;
 
 import com.google.common.reflect.TypeToken;
-import io.github.hhservers.bstarter.BStarter;
+import io.github.hhservers.bloader.BLoader;
 import lombok.Data;
 import lombok.Getter;
 import ninja.leaping.configurate.ConfigurationOptions;
@@ -16,13 +16,13 @@ import java.io.IOException;
 @Data
 public class ConfigHandler {
 
-    private  BStarter plugin = BStarter.getInstance();
-    private File confFile =new File(plugin.getConfigDir(), "BStarter.conf");
+    private BLoader plugin = BLoader.getInstance();
+    private File confFile =new File(plugin.getConfigDir(), "BLoader.conf");
     private ConfigurationLoader<CommentedConfigurationNode> configLoad;
     @Getter
     private MainPluginConfig pluginConf;
 
-    public ConfigHandler(BStarter plugin) {
+    public ConfigHandler(BLoader plugin) {
         this.plugin = plugin;
         if (!plugin.getConfigDir().exists()) {
             plugin.getConfigDir().mkdirs();
