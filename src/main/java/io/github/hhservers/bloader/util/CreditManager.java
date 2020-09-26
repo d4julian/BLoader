@@ -25,7 +25,7 @@ public class CreditManager {
     //private ChunkManager chunkManager = BLoader.getInstance().getChunkManager();
 
     private Set<Context> serverContext() {
-        return Collections.singleton(new Context("server", BLoader.getMainPluginConfig().getServeName()));
+        return Collections.singleton(new Context("server", BLoader.getMainPluginConfig().getServerName()));
     }
 
     public Integer getCredits(User p) {

@@ -4,10 +4,6 @@ import lombok.Data;
 import ninja.leaping.configurate.objectmapping.Setting;
 import ninja.leaping.configurate.objectmapping.serialize.ConfigSerializable;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
-
 @ConfigSerializable @Data
 public class MainPluginConfig {
 
@@ -24,6 +20,6 @@ public class MainPluginConfig {
     private String dbName = "dbName";
 
     @Setting(value = "serverName")
-    private String serveName = "serverName";
+    private String serverName = "serverName";
 
 }

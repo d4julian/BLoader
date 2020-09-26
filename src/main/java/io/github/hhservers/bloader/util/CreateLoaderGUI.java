@@ -14,7 +14,6 @@ import org.spongepowered.api.item.inventory.property.SlotIndex;
 import org.spongepowered.api.item.inventory.property.SlotPos;
 import org.spongepowered.api.item.inventory.query.QueryOperationTypes;
 import org.spongepowered.api.item.inventory.transaction.SlotTransaction;
-import org.spongepowered.api.text.Text;
 import org.spongepowered.api.text.serializer.TextSerializers;
 import org.spongepowered.api.world.World;
 
@@ -112,7 +111,7 @@ public class CreateLoaderGUI {
         ItemStack item = clickTransaction.getOriginal().createStack();
         World w = p.getWorld();
 
-        chunkloader.setServerName(BLoader.getMainPluginConfig().getServeName());
+        chunkloader.setServerName(BLoader.getMainPluginConfig().getServerName());
         chunkloader.setOwner(p.getUniqueId());
         chunkloader.setLoaderID(UUID.randomUUID());
         chunkloader.setCreationDate(System.currentTimeMillis());

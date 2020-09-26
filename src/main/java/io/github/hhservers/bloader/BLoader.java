@@ -27,8 +27,6 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
-import java.util.stream.Collectors;
 
 @Plugin(
         id = "bloader",
@@ -171,7 +169,7 @@ public class BLoader {
     }
 
     public boolean configChecker(){
-        if(BLoader.getMainPluginConfig().getServeName().equalsIgnoreCase("serverName")){
+        if(BLoader.getMainPluginConfig().getServerName().equalsIgnoreCase("serverName")){
             return false;
         }
         if(BLoader.getMainPluginConfig().getHostname().equalsIgnoreCase("hostname")){
